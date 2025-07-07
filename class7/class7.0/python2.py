@@ -21,4 +21,20 @@ def dfs(root, goal):
         for child in reversed(current_node.children):
             stack.append(child)
 
+print(f"Goal node '{goal}' not found in the tree.")
 
+# Create tree nodes
+A = Node('A')
+B = Node('B')
+C = Node('C')
+D = Node('D')
+E = Node('E')
+F = Node('F')
+
+# Build tree
+A.children = [B, C, D]
+B.children = [E]
+D.children = [F]
+
+# Run DFS to search for node 'D'
+dfs(A, 'D')
